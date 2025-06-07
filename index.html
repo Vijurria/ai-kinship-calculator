@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国亲戚计算器</title>
+    <link rel="stylesheet" href="src/assets/style.css">
+</head>
+<body>
+    <div class="split-container">
+        <div class="card-wrapper">
+            <!-- 左侧主操作区 -->
+            <div class="main-panel">
+                <div class="header">中国亲戚计算器</div>
+                <div class="display-area">
+                    <div id="input-display" class="input-display">请输入关系</div>
+                    <div id="result-display" class="result-display"></div>
+                    <div class="action-row">
+                        <button id="show-graph-btn" class="show-graph-btn">查看关系图谱</button>
+                    </div>
+                </div>
+                <div class="button-panel">
+                    <div class="button-grid">
+                        <button class="calc-btn" data-value="夫">夫</button>
+                        <button class="calc-btn" data-value="妻">妻</button>
+                        <button class="calc-btn" id="del-btn" aria-label="删除"><span class="icon-del"></span></button>
+                        <button class="calc-btn ac-btn" id="ac-btn">AC</button>
+                        <button class="calc-btn" data-value="父">父</button>
+                        <button class="calc-btn" data-value="母">母</button>
+                        <button class="calc-btn" data-value="兄">兄</button>
+                        <button class="calc-btn" data-value="弟">弟</button>
+                        <button class="calc-btn" data-value="姐">姐</button>
+                        <button class="calc-btn" data-value="妹">妹</button>
+                        <button class="calc-btn" data-value="子">子</button>
+                        <button class="calc-btn" data-value="女">女</button>
+                    </div>
+                    <button class="calc-btn equal-btn" id="equal-btn">=</button>
+                </div>
+            </div>
+            <!-- 右侧关系图谱弹窗区 -->
+            <div class="graph-panel" id="graph-panel">
+                <div class="graph-card">
+                    <div class="graph-card-header">
+                        <span>关系图谱</span>
+                        <button id="close-graph-btn" class="close-graph-btn">关闭</button>
+                    </div>
+                    <div id="relation-graph-svg" class="relation-graph-svg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="src/main-calc-ui.js"></script>
+</body>
+</html> 
